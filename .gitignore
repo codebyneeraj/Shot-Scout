@@ -1,0 +1,17 @@
+# Secrets
+.env
+*.keystore
+*.jks
+key.properties
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Local tooling output
+graphify-out/
+
+# Saved copy of a third-party article (not ours to redistribute)
+UI_UX.htm
+UI_UX_files/
