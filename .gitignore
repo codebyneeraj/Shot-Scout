@@ -15,3 +15,6 @@ graphify-out/
 # Saved copy of a third-party article (not ours to redistribute)
 UI_UX.htm
 UI_UX_files/
+
+# Release build settings (shared app key)
+app/release.env
