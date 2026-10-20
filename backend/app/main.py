@@ -4,6 +4,9 @@ from dotenv import load_dotenv
 
 # Load backend/.env before anything reads API keys. Real environment variables win.
 ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
+# On Render the keys come from a secret file mounted here instead of the repo.
+if not ENV_FILE.exists() and Path("/etc/secrets/.env").exists():
+    ENV_FILE = Path("/etc/secrets/.env")
 load_dotenv(ENV_FILE)
 
 from fastapi import FastAPI, HTTPException  # noqa: E402
